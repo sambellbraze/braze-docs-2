@@ -169,10 +169,6 @@ You can upload a CSV of new catalog items to add or catalog items to update. To 
 
 You can also manually piece together catalogs Liquid logic. However, note that if you type in an ID that doesn't exist, Braze will still return an items array without objects. We recommend that you include error handling, such as checking the size of the array and using an `if` statement to account for an empty array case.
 
-{% alert note %}
-Liquid currently can't be used inside catalogs. If Liquid personalization is listed inside a cell in your catalog, the dynamic value won't render and only the actual Liquid will display.
-{% endalert %}
-
 #### Templating catalog items including Liquid
 
 Similar to [Connected Content]({{site.baseurl}}/user_guide/personalization_and_dynamic_content/connected_content), you must use the `:rerender` flag in a Liquid tag to render a catalog item's Liquid content. Note that the `:rerender` flag is only one level deep, meaning it won't apply to any nested Liquid tag calls.
